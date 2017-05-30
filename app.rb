@@ -4,6 +4,8 @@ require 'json'
 
 get '/' do
   body = 'Hello CSP Report! <br /><img src="http://ackintosh.github.io/assets/images/favicon.gif" />'
+  # see https://www.w3.org/TR/reporting-1/#endpoint-delivery
+  # see https://w3c.github.io/webappsec-csp/#directives-reporting
   report_to = {
       url: 'https://cspreport.herokuapp.com/csp-report',
       group: 'cspreport',
